@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html
+	xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://xmlns.jcp.org/jsf/html" 
+	xmlns:p="http://primefaces.org/ui"
+	xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+	<h:head>
+		<title>Teste Prático Para Desenvolvedor Java</title>
+	</h:head>
+
+    <h:body id="body" >
+		<p:panel>
+			<f:facet name="header">
+				<h:outputText style="font-size:20px;" value="Cadastro de Solicitantes" />
+			</f:facet>
+		</p:panel>
+		<div>
+			<h:form>
+				<h:panelGrid columns="2">
+					<p:outputLabel value="Nome do solicitante:" for="nomeSolicitante"/>
+					<p:inputText id="nomeSolicitante" value="#{gestaoBean.solicitante.nome}" />
+					<p:outputLabel />
+					<p:commandButton action = "#{gestaoBean.salvarSolicitante}" value = "Salvar" />
+				</h:panelGrid>
+				<p:commandButton action = "index?faces-redirect=true" value = "Voltar" />
+			</h:form>
+		</div>
+    </h:body>
+</html>

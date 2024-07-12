@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html
+	xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://xmlns.jcp.org/jsf/html" 
+	xmlns:p="http://primefaces.org/ui"
+	xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+	<h:head>
+		<title>Teste Prático Para Desenvolvedor Java</title>
+	</h:head>
+
+    <h:body id="body" >
+		<f:facet name="header">
+			<h:outputText style="font-size:20px;" value="Navegacao" />
+		</f:facet>
+		<h:form>
+			<h3>Painel de Cadastros/Consultas</h3>
+			<div class="card">
+				<p:tabMenu activeIndex="#{param.i}" >
+					<p:menuitem value="Cadastrar vagas" action="CadastroVagas?faces-redirect=true" icon="pi pi-fw pi-pencil" ajax="false" >
+						<f:param name="i" value="0"/>
+					</p:menuitem>
+					<p:menuitem value="Cadastrar solicitantes" action="CadastroSolicitantes?faces-redirect=true" icon="pi pi-fw pi-pencil" ajax="false" >
+						<f:param name="i" value="1"/>
+					</p:menuitem>
+					<p:menuitem value="Cadastrar agendamentos" action="CadastroAgendamentos?faces-redirect=true" icon="pi pi-fw pi-pencil" ajax="false" >
+						<f:param name="i" value="2"/>
+					</p:menuitem>
+					<p:menuitem value="Consulta de agendamentos" action="ConsultaAgendamentos?faces-redirect=true" icon="pi pi-fw pi-file" ajax="false" >
+						<f:param name="i" value="3"/>
+					</p:menuitem>
+					<p:menuitem value="Consulta total de agendamentos por solicitante" action="ConsultaAgendamentosSolicitantes?faces-redirect=true" icon="pi pi-fw pi-file" ajax="false">
+						<f:param name="i" value="4"/>
+					</p:menuitem>
+				</p:tabMenu>
+			</div>
+		</h:form>
+    </h:body>
+</html>
